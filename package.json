@@ -1,0 +1,53 @@
+{
+  "name": "silver-price-per-gram-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for the live silver price per gram and ounce by fineness and currency, sterling and junk silver coin melt value, and the gold to silver ratio.",
+  "type": "module",
+  "license": "MIT",
+  "author": "theluckystrike",
+  "mcpName": "io.github.theluckystrike/silver-price-per-gram-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theluckystrike/silver-price-per-gram-mcp"
+  },
+  "homepage": "https://goldgramprice.com",
+  "bin": {
+    "silver-price-per-gram-mcp": "dist/stdio.js"
+  },
+  "main": "dist/stdio.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test",
+    "start": "node dist/stdio.js",
+    "deploy": "npx wrangler@4 deploy"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "claude",
+    "silver",
+    "silver-price",
+    "silver-price-per-gram",
+    "junk-silver",
+    "sterling-silver",
+    "gold-silver-ratio",
+    "precious-metals"
+  ]
+}
